@@ -9,7 +9,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('background.jpg') no-repeat center center fixed;
+      background: no-repeat center center fixed;
       background-size: cover;
       font-family: Georgia, serif;
     }
@@ -130,5 +130,21 @@
       <p>&copy; 2025 Dominic Bair</p>
     </footer>
   </div>
+  <script>
+    // List of your background images
+    const backgrounds = [
+      "background_1.jpg",
+      "background_2.jpg",
+      "background_3.jpg",
+      "background_4.jpg",
+      "background_5.jpg"
+    ];
+
+    // Pick a random one
+    const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+    // Apply it to the body
+    document.body.style.backgroundImage = `url('${randomBg}')`;
+  </script>
 </body>
 </html>
