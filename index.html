@@ -64,11 +64,24 @@
     a {
       color: #0077cc;
     }
+
+    .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* makes the image circular */
+    object-fit: cover;  /* ensures it fills the circle */
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
   </style>
 </head>
 <body>
   <div class="content">
     <header>
+      <img src="Dominic_Bair.jpg" alt="Dominic Bair" class="profile-pic">
       <h1>Dominic Bair</h1>
       <p>PhD Candidate in Mathematics<br>University of Tennessee</p>
       <nav>
