@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%
+% This CV example/template is based on my own
+% CV which I (lamely attempted) to clean up, so that
+% it's less of an eyesore and easier for others to use.
+%
+% LianTze Lim (liantze@gmail.com)
+% 23 Oct, 2022
+%
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+% Uncomment to enable Chinese; needs XeLaTeX
+% \usepackage{ctex}
+
+
+% Default biblatex style used for the publication list is APA6. If you wish to use a different style or pass other options to biblatex you can change them here. 
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+% Most commands and style definitions are in settings.sty.
+\usepackage{settings}
+\usepackage{amsmath}
+
+
+%% Only needed if you want a Publication List
+\addbibresource{own-bib.bib}
+
+%% Specify your last name(s) and first name(s) (as given in the .bib) to automatically bold your own name in the publications list. 
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+% \mynames{Lim/Lian\bibnamedelima Tze}
+
+%% You can specify multiple names like this, especially if you have changed your name or if you need to highlight multiple authors. See items 6–9 in the example "Journal Articles" output.
+\mynames{Bair/Dominic}
+% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec} 
+  %% You can use \setmainfont etc; I'm just using these font packages here because they provide OpenType fonts for use by XeLaTeX/LuaLaTeX anyway
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\fi
+
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+% \definecolor{SwishLineColour}{HTML}{00FFFF}
+% \definecolor{MarkerColour}{HTML}{0000CC}
+
+% Change the item prefix marker if you want
+% \prefixmarker{$\diamond$}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+% \excludecomment{fullonly}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily Dominic Bair}
+
+  \begin{tabular}{@{}ll@{\hspace{2em}}ll@{}}
+    \faEnvelope[regular] & \href{mailto:dbair@tennessee.edu}{\texttt{dbair@tennessee.edu}} &
+    \faGlobe & \url{www.dbair.xyz} \\
+    \faGithub & \href{https://github.com/DothWalrus}{\texttt{DothWalrus}} &
+    \faLinkedinIn & \href{https://linkedin.com/in/dominic-bair-861ab0189/}{\texttt{Dominic Bair}}
+  \end{tabular}
+}
+
+\rightheader{~}
+\begin{fullonly}
+%\photo[r]{photo}
+\photoscale{0.13}
+\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+% 21 November, 2023
+% \bigskip
+
+% Hiring Manager
+
+% Maxar Intelligence
+
+% Longmont, Colorado 80503
+% \bigskip
+
+
+
+% To whom it may concern,
+% \bigskip
+
+% I am presently a Ph.D. student in mathematics at the University of Tennessee. However, I have decided that I want to move into a career track position to gain experience, then possibly finish a Ph.D at a later time. I have a strong background in statistics, applied mathematics, experimental physics, and technical challenges in a wide range of other areas.  My software developing experiences include creating software for use by non--technical collaborators; creating software to interface with electro--mechanical devices; developing Monte Carlo simulations; creating systems for statistical and image analysis, and developing deep learning algorithms. Proof of these projects' success is given by the publications listed below. Finally, my years of teaching experience has sharpened my skills of delivering technical information to a non--technical audience.
+% \bigskip
+
+
+% My research experience lies primarily in data science and statistics. As an undergraduate researcher, I collaboratively developed image analysis software for use in an immunology application. This software package included edge--finding, blob--detection, and statistical analysis elements, as well as a user interface I developed for easy of use. In my master's program, I developed a machine learning algorithm for finding weak solutions to partial differential equations; I then wrote and defended my thesis on this project. Since starting my Ph.D. program, I have largely focused on developing sampling algorithms and Bayesian models for statistical inference.
+% %My natural curiosity and mission--first disposition makes me an excellent troubleshooter. Perhaps my most relevant experience in this is in experimental physics. While I was operating multiple experiments, I was required to have thorough knowledge of each projects' goals, systems, and subsystems to ensure accurate and meaningful results would be captured, all while ensuring the safety of the equipment and personnel in the lab. This position required strong critical thinking, problem diagnostic, and problem solving skills.
+% \bigskip
+
+% I believe my background amd experience has made me both a flexible problem solver and an excellent data analyst and makes me fit for the position of Mission Planning Systems Mission Analyst at Maxar Intelligence. I would very much appreciate the opportunity to discuss my qualifications further either in person or virtually. I would like to thank the reviewers of this application for their time and consideration.
+% \bigskip
+
+% Sincerely,
+% \bigskip
+% \bigskip
+% \bigskip
+% \bigskip
+
+
+
+% Dominic Bair
+
+
+% \newpage
+
+\makeheaders[c]
+
+
+
+%\makerubric{about}
+\makerubric{education}
+\makerubric{interests}
+
+% If you're not a researcher nor an academic, you probably don't have any publications; delete this line.
+%% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own and use \input NOT \makerubric
+\input{publications}
+
+\makerubric{teaching}
+\makerubric{conferences}
+\makerubric{presentations}
+\makerubric{awards}
+\makerubric{reading}
+\makerubric{employment}
+\makerubric{service}
+\makerubric{skills}
+
+%\makerubric{referee}
+%\input{referee-full}
+
+\end{document}
